@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Livro: A Era Artificial</title>
+  <meta name="description" content="Página de divulgação do livro A Era Artificial — sinopse, autor e link de compra." />
+
+  <!-- Fonte tecnológica do Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --preto: #181A20;
+      --cinza-claro: #F5F5F5;
+      --cinza-borda: #23272F;
+      --verde: #49B970;
+      --azul: #00CFFF;
+      --maxw: 980px;
+      --gradiente: linear-gradient(135deg, #181A20 0%, #23272F 100%);
+      --gradiente-btn: linear-gradient(90deg, #49B970 0%, #00CFFF 100%);
+    }
+
+    *{ box-sizing: border-box; }
+    body{
+      margin: 0;
+      background: var(--gradiente);
+      color: var(--cinza-claro);
+      font: 16px/1.6 'Orbitron', Arial, Helvetica, sans-serif;
+      min-height: 100vh;
+    }
+
+    h1, h2, h3{
+      font-family: 'Orbitron', Arial, Helvetica, sans-serif;
+      text-align: center;
+      margin: 0 0 16px 0;
+      letter-spacing: 2px;
+      text-shadow: 0 2px 8px #00CFFF44;
+    }
+    h1{ font-size: 2.2rem; margin-top: 0; }
+    h2{ font-size: 1.35rem; color: var(--azul); }
+    h3{ font-size: 1.2rem; color: var(--verde); }
+
+    p{
+      margin: 0 auto 16px auto;
+      max-width: 820px;
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #e0e0e0;
+    }
+
+    .container{ max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
+    .sec{
+      border-top: 1px solid var(--cinza-borda);
+      padding: 50px 0;
+      text-align: center;
+      background: transparent;
+      backdrop-filter: blur(2px);
+    }
+
+    .capa{
+      width: 220px;
+      max-width: 90%;
+      height: auto;
+      display: block;
+      margin: 10px auto 18px auto;
+      border-radius: 12px;
+      box-shadow: 0 8px 32px #00CFFF33, 0 2px 8px #49B97033;
+      border: 2px solid var(--azul);
+      transition: transform .2s;
+    }
+    .capa:hover{
+      transform: scale(1.04) rotate(-2deg);
+      box-shadow: 0 12px 40px #00CFFF66, 0 4px 16px #49B97066;
+    }
+    .autor{
+      width: 260px;
+      max-width: 90%;
+      height: auto;
+      display: block;
+      margin: 10px auto 12px auto;
+      border-radius: 50%;
+      box-shadow: 0 6px 22px #49B97044;
+      border: 2px solid var(--verde);
+      transition: transform .2s;
+    }
+    .autor:hover{
+      transform: scale(1.03);
+      box-shadow: 0 10px 32px #49B97088;
+    }
+
+    .btn{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--gradiente-btn);
+      color: #fff;
+      font-family: 'Orbitron', Arial, Helvetica, sans-serif;
+      font-weight: 700;
+      padding: 12px 28px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: 1.1rem;
+      box-shadow: 0 2px 12px #00CFFF44;
+      border: none;
+      transition: transform .15s, filter .15s, box-shadow .15s;
+      margin-top: 18px;
+      letter-spacing: 1px;
+      position: relative;
+      overflow: hidden;
+    }
+    .btn::after{
+      content: '';
+      position: absolute;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #fff2 0%, #00CFFF22 100%);
+      opacity: 0;
+      transition: opacity .3s;
+      pointer-events: none;
+    }
+    .btn:hover,
+    .btn:focus{
+      filter: brightness(1.08);
+      transform: translateY(-2px) scale(1.04);
+      box-shadow: 0 4px 24px #00CFFF88;
+    }
+    .btn:hover::after,
+    .btn:focus::after{
+      opacity: 1;
+    }
+
+    .btn svg{
+      width: 22px;
+      height: 22px;
+      fill: #fff;
+      filter: drop-shadow(0 0 4px #00CFFF);
+    }
+
+    span{ font-weight: 700; color: var(--azul); }
+
+    a:focus{ outline: 2px dashed var(--verde); outline-offset: 3px; }
+
+    .lead{ margin-bottom: 22px; font-size: 1.08rem; }
+
+    @media (max-width: 520px){
+      h1{ font-size: 1.4rem; }
+      h2{ font-size: 1.1rem; }
+      h3{ font-size: 1rem; }
+      .btn{ font-size: 1rem; padding: 10px 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <main class="container">
+    <!-- ==================== 1ª SEÇÃO (Informações sobre o livro) ==================== -->
+    <section class="sec" id="livro">
+      <h1>A Era Artificial</h1>
+
+      <!-- Imagem da capa (use seu arquivo local) -->
+      <img class="capa" src="capa-livro.jpg" alt="Capa do livro A Era Artificial">
+
+      <h2>Um futuro sombrio a nosso caminho</h2>
+      <p class="lead">
+        A história em que a inteligência artificial permitiu aos robôs se tornarem a espécie dominante do nosso planeta.
+        Uma luta incessante pela sobrevivência humana tem início em um cenário catastrófico dominado pela guerra e pelo caos.
+      </p>
+
+      <!-- Link externo para a venda do livro -->
+      <a class="btn" href="https://www.amazon.com.br/Era-Artificial-tempo-sombrio-m%C3%A1quinas-ebook/dp/B07VFF5368" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24"><path d="M7 17l5-5 5 5M12 12V3"/></svg>
+        COMPRAR
+      </a>
+    </section>
+
+    <!-- ==================== 2ª SEÇÃO (Sinopse) ==================== -->
+    <section class="sec" id="sinopse">
+      <h3>Uma história intensa</h3>
+      <p>
+        <span>Era Artificial - O Tempo Sombrio das Máquinas</span> deixa o leitor apreensivo com algumas situações que ocorrem
+        em um cenário catastrófico tomado pela destruição. E isso o leva a refletir: veremos um dia a tão temida singularidade tecnológica?
+      </p>
+    </section>
+
+    <!-- ==================== 3ª SEÇÃO (Autor) ==================== -->
+    <section class="sec" id="autor">
+      <h3>Informações sobre o autor</h3>
+
+      <!-- Imagem do autor (use seu arquivo local) -->
+      <img class="autor" src="autor.jpg" alt="Foto do autor Diego Souza">
+
+      <p>
+        Diego Souza é apaixonado por tecnologia e trabalha com Desenvolvimento Web. Também é escritor e dedica-se a criar histórias que misturam ficção científica e aventura.
+      </p>
+    </section>
+  </main>
+
+</body>
+</html>
